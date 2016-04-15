@@ -1,0 +1,164 @@
+body {
+	font-family: "helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 100%;
+    line-height: 1.125em; /* 16×1.125=18 */
+	color: #505050;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	text-transform: capitalize;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   	font-weight: 300;
+   	color: #650360;
+}
+
+h3 {
+	color: #650360;
+}
+
+h4 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   	font-weight: 300;
+   	font-size: 1.75em;
+}
+	h4 span {
+		display: inline-block;
+		padding-top: 22px;
+	}
+	
+	h4 span.header_emphasis {
+		font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   		font-weight: bold;
+   		border-left: 1px solid #505050;
+   		height: 46px;
+   		padding-left: 15px;
+   		margin-left: 15px;
+	}
+
+ul {
+	list-style: none;
+	margin: 0;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+     
+.clearfix { display: inline-block; }
+
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+#logo {
+	background: url(../images/ally_logo.png) no-repeat;
+	font-size: 1.54em;
+	height: 34px;
+	padding-left: 46px;
+	padding-top: 10px;
+	display: block;
+	color: #505050;
+	float: left;
+}
+
+header {
+	background-color: #328fc2;
+	padding: 0 104px;
+}
+	header nav a {
+		color: #f9f8f9;
+	}
+	
+	header nav .active {
+		background-color: #006899;
+		font-weight: bold;
+	}
+	
+nav {
+	float: right;
+}
+
+	nav ul {
+		
+	}
+	
+		nav ul li {
+			float: left;
+		}
+		
+			nav ul li a, footer nav li a {
+				text-decoration: none;
+				display: block;
+				padding: 13px 20px;
+			}
+
+#main {
+	margin: 0 104px;	
+}
+
+.info_box {
+	background: #bbd8c4;
+	padding: 16px 150px 15px 15px;
+}
+
+/* Normally, I might just use a grid system, but that seems a little resource-heavy here */
+.col_80 {
+	width: 76%;
+	float: left;
+	margin-right: 20px;
+}
+
+	.col_80 section {
+		position: relative;
+	}
+	
+		#phone_graphic {
+			position: absolute;
+			bottom: 12px;
+			right: 30px;
+		}
+
+.col_20 {
+	width: 20%;
+	float: right;
+}
+
+
+footer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: #e7e8e9;
+}
+
+footer, footer a {
+	color: #328FC2;
+}
+
+footer nav {
+	margin-right: 104px;
+}
+
+#copyright {
+	float: left;
+	margin-left: 104px;
+}
+
+.bodytext p {
+    font-size:0.875em;
+}
+
+.sidenote {
+    font-size:0.75em;
+}
