@@ -7,4 +7,5 @@ $( document ).ready(function() {
 			$("#rates_table tbody").append(string);
 		};
 	});
+	$("footer").css("bottom", 0);
 });
