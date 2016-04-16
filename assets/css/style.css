@@ -133,6 +133,14 @@ nav {
 	float: right;
 }
 
+table tbody tr:nth-child(even) {
+	background-color: #eef5f0;
+}
+
+table tbody tr:nth-child(odd) {
+	background-color: #ddebe1;
+}
+
 
 footer {
 	width: 100%;
