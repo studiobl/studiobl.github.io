@@ -7,12 +7,15 @@ $( document ).ready(function() {
 			$("#rates_table tbody").append(string);
 		};
 	});
+	$(".tab_pane").css("display", "none");
+	var active_id = $(".tab_wrapper ul.clearfix li.active").attr("id");
+	var active_pane = "#" + active_id + "_pane";
+	$(active_pane).css("display", "block");
 	$(".tab_wrapper ul.clearfix li").click(function(){
 		$(".tab_wrapper ul.clearfix li").toggleClass("active");
 		$(".tab_pane").css("display", "none");
 		var pane_id = "#" + $(this).attr("id") + "_pane";
-		console.log("pane_id: " + pane_id);
-		$( pane_id).css("display", "block");
+		$(pane_id).css("display", "block");
 		
 	});
 });
