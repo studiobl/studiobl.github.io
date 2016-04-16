@@ -21,7 +21,7 @@ $( document ).ready(function() {
 		
 	});
 	
-	$(".overlay").click(function(){
-		$(".overlay").css("display", "none");
+	$(".overlay, .modal_header span").click(function(){
+		$(".overlay, .modal").css("display", "none");
 	})
 });
