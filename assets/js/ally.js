@@ -8,6 +8,6 @@ $( document ).ready(function() {
 		};
 	});
 	$(".tab_wrapper ul.clearfix li").click(function(){
-		$(".tab_wrapper ul.clearfix li").toggleClas("active")
+		$(".tab_wrapper ul.clearfix li").toggleClass("active")
 	});
 });
