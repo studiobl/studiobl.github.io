@@ -10,8 +10,9 @@ $( document ).ready(function() {
 	$(".tab_wrapper ul.clearfix li").click(function(){
 		$(".tab_wrapper ul.clearfix li").toggleClass("active");
 		$(".tab_pane").css("display", "none");
-		var pane_id = $("this").attr("id") + "_pane";
-		$("#" + pane_id).css("display", "block");
+		var pane_id = "#" + $("this").attr("id") + "_pane";
+		console.log("pane_id: " + pane_id);
+		$( pane_id).css("display", "block");
 		
 	});
 });
