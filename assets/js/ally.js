@@ -23,5 +23,9 @@ $( document ).ready(function() {
 	
 	$(".overlay, .modal_header span").click(function(){
 		$(".overlay, .modal").css("display", "none");
-	})
+	});
+	
+	$(".col_20 button").click(function(){
+		$(".modal, .overlay").css("display", "block");
+	});
 });
