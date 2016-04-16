@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-	$.getJSON( "code-test.json", function( data ) {
+	$.getJSON( "https://studiobl.github.io/assets/js/code-test.json", function( data ) {
 		
 		for(i=0; i<data.length; i++){
 			dataObj = data[i];
