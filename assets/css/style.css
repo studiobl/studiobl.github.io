@@ -9,6 +9,7 @@ body {
 	font-size: 100%;
 	line-height: 1.125em; /* 16×1.125=18 */
 	color: #505050;
+	position: relative;
 }
 
 #container {
@@ -62,13 +63,13 @@ ul {
 
 ul.bulleted {
 	list-style: disc;
-	margin-bottom:20px;
+	margin-bottom: 20px;
 }
 
-	ul.bulleted li {
-		margin-bottom: 10px;	
-	}
-	
+ul.bulleted li {
+	margin-bottom: 10px;
+}
+
 .clearfix:after {
 	visibility: hidden;
 	display: block;
@@ -142,9 +143,9 @@ nav ul li a, footer nav li a {
 	padding: 16px 150px 15px 15px;
 }
 
-	.info_box h3 {
-		margin-top: 0;
-	}
+.info_box h3 {
+	margin-top: 0;
+}
 
 /* Normally, I might just use a grid system, but that seems a little resource-heavy here */
 .col_80 {
@@ -182,7 +183,7 @@ button {
 	width: 100%;
 	text-align: center;
 	color: #fff;
-	
+	cursor: pointer;
 }
 
 table tbody tr:nth-child(even) {
@@ -223,7 +224,6 @@ table {
 	text-align: left;
 }
 
-
 .tab_pane {
 	background-color: #f5f5f5;
 	padding: 31px 15px;
@@ -242,33 +242,33 @@ table {
 	border-right: 1px solid #ccc;
 	margin-top: 20px;
 }
-	.tab_wrapper ul.clearfix li a {
-		display: block;
-		padding: 10px 16px;
-	}
-	
-	.tab_wrapper ul.clearfix li.active {
-		
-	}
-	
-	.tab_wrapper ul.clearfix li.active {
-		background-color: #f5f5f5;
-		margin-top: 11px;
-		margin-bottom: -1px;
-	}
-	
-		.tab_wrapper ul.clearfix li.active a {
-			padding-top: 20px;
-		}
+.tab_wrapper ul.clearfix li a {
+	display: block;
+	padding: 10px 16px;
+}
+
+.tab_wrapper ul.clearfix li.active {
+
+}
+
+.tab_wrapper ul.clearfix li.active {
+	background-color: #f5f5f5;
+	margin-top: 11px;
+	margin-bottom: -1px;
+}
+
+.tab_wrapper ul.clearfix li.active a {
+	padding-top: 20px;
+}
 
 #archive_pane li {
 	margin-bottom: 20px;
 }
 
-	#archive_pane li a {
-		font-weight: bold;
-	}
-	
+#archive_pane li a {
+	font-weight: bold;
+}
+
 #archive_pane p {
 	margin-top: 12px;
 }
@@ -277,7 +277,6 @@ p.news_item_title {
 	color: #328fc2;
 	font-weight: bold;
 }
-
 
 footer {
 	width: 100%;
@@ -308,3 +307,67 @@ footer nav {
 .sidenote {
 	font-size: 0.75em;
 }
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background-color: rgba(0,0,0,0.5);
+	display: none;
+}
+
+.modal {
+	width: 450px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -225px;
+	margin-top: -100px;
+	z-index: 11;
+	border: 1px solid;
+	background-color: #fff;
+	padding: 20px;
+	display: none;
+}
+
+	.modal_header {
+		font-size: 1.75em;
+		font-weight: 300;
+	}
+	
+		.modal_header span {
+			color: #650360;
+			font-weight: bold;
+			display: block;
+			float: right;
+			font-size: .75em;
+			margin-top: -10px;
+			cursor: pointer;
+		}
+
+	.modal button {
+		width: auto;
+		padding: 5px 30px;
+		float: right;
+	}
+	
+	.modal .form_row {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	
+		.modal .form_row label {
+			display: inline-block;
+			font-size: .87em;
+			padding-top: 5px;
+		}
+		
+		.modal .form_row input {
+			width: 70%;
+			float: right;
+			border: 1px solid #328fc2;
+			line-height: 2em;
+		}
