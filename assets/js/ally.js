@@ -7,6 +7,8 @@ $( document ).ready(function() {
 			$("#rates_table tbody").append(string);
 		};
 	});
+	
+	
 	$(".tab_pane").css("display", "none");
 	var active_id = $(".tab_wrapper ul.clearfix li.active").attr("id");
 	var active_pane = "#" + active_id + "_pane";
@@ -18,4 +20,8 @@ $( document ).ready(function() {
 		$(pane_id).css("display", "block");
 		
 	});
+	
+	$(".overlay").click(function(){
+		$(".overlay").css("display", "none");
+	})
 });
