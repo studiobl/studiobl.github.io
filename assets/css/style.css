@@ -1,19 +1,35 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
 body {
 	font-family: "helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 100%;
-    line-height: 1.125em; /* 16×1.125=18 */
+	font-size: 100%;
+	line-height: 1.125em; /* 16×1.125=18 */
 	color: #505050;
+}
+
+#container {
+	min-height: 100%;
+	position: relative;
 }
 
 a {
 	text-decoration: none;
+	color: #3285c2;
+}
+
+p a {
+	text-decoration: underline;
 }
 
 h1 {
 	text-transform: capitalize;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   	font-weight: 300;
-   	color: #650360;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	color: #650360;
 }
 
 h3 {
@@ -21,43 +37,58 @@ h3 {
 }
 
 h4 {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   	font-weight: 300;
-   	font-size: 1.75em;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	font-size: 1.75em;
 }
-	h4 span {
-		display: inline-block;
-		padding-top: 22px;
-	}
-	
-	h4 span.header_emphasis {
-		font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   		font-weight: bold;
-   		border-left: 1px solid #505050;
-   		height: 46px;
-   		padding-left: 15px;
-   		margin-left: 15px;
-	}
+h4 span {
+	display: inline-block;
+	padding-top: 22px;
+}
+
+h4 span.header_emphasis {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: bold;
+	border-left: 1px solid #505050;
+	height: 46px;
+	padding-left: 15px;
+	margin-left: 15px;
+}
 
 ul {
 	list-style: none;
 	margin: 0;
 }
 
+ul.bulleted {
+	list-style: disc;
+	margin-bottom:20px;
+}
+
+	ul.bulleted li {
+		margin-bottom: 10px;	
+	}
+	
 .clearfix:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
-     }
-     
-.clearfix { display: inline-block; }
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
 
 /* start commented backslash hack \*/
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
 /* close commented backslash hack */
 
 #logo {
@@ -75,35 +106,35 @@ header {
 	background-color: #328fc2;
 	padding: 0 104px;
 }
-	header nav a {
-		color: #f9f8f9;
-	}
-	
-	header nav .active {
-		background-color: #006899;
-		font-weight: bold;
-	}
-	
+header nav a {
+	color: #f9f8f9;
+}
+
+header nav .active {
+	background-color: #006899;
+	font-weight: bold;
+}
+
 nav {
 	float: right;
 }
 
-	nav ul {
-		
-	}
-	
-		nav ul li {
-			float: left;
-		}
-		
-			nav ul li a, footer nav li a {
-				text-decoration: none;
-				display: block;
-				padding: 13px 20px;
-			}
+nav ul {
+
+}
+
+nav ul li {
+	float: left;
+}
+
+nav ul li a, footer nav li a {
+	text-decoration: none;
+	display: block;
+	padding: 13px 20px;
+}
 
 #main {
-	margin: 0 104px;	
+	margin: 0 104px;
 }
 
 .info_box {
@@ -111,26 +142,47 @@ nav {
 	padding: 16px 150px 15px 15px;
 }
 
+	.info_box h3 {
+		margin-top: 0;
+	}
+
 /* Normally, I might just use a grid system, but that seems a little resource-heavy here */
 .col_80 {
 	width: 76%;
 	float: left;
 	margin-right: 20px;
+	padding-bottom: 99px;
 }
 
-	.col_80 section {
-		position: relative;
-	}
-	
-		#phone_graphic {
-			position: absolute;
-			bottom: 12px;
-			right: 30px;
-		}
+.col_80 section {
+	position: relative;
+}
+
+#phone_graphic {
+	position: absolute;
+	bottom: 12px;
+	right: 30px;
+}
 
 .col_20 {
 	width: 20%;
 	float: right;
+	padding-bottom: 99px;
+	padding-top: 65px;
+}
+
+button {
+	margin: 0;
+	padding: 10px 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: #650360;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	
 }
 
 table tbody tr:nth-child(even) {
@@ -141,9 +193,95 @@ table tbody tr:nth-child(odd) {
 	background-color: #ddebe1;
 }
 
+table thead th, p.table_note {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	color: #505050;
+	font-size: .75em;
+	text-align: right;
+}
+
+p.table_note {
+}
+
+table tbody tr td {
+	text-align: right;
+	padding: 16px 19px;
+}
+
+table tbody tr td.bank_name {
+	text-align: left;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#bank_name {
+	text-indent: -5000px;
+	text-align: left;
+}
+
+
+.tab_pane {
+	background-color: #f5f5f5;
+	padding: 31px 15px;
+	border-top: 1px solid #ccc;
+}
+
+.tab_wrapper ul {
+	padding: 0;
+	margin-top: 14px;
+}
+
+.tab_wrapper ul.clearfix li {
+	float: left;
+	background-color: #ddebe1;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	margin-top: 20px;
+}
+	.tab_wrapper ul.clearfix li a {
+		display: block;
+		padding: 10px 16px;
+	}
+	
+	.tab_wrapper ul.clearfix li.active {
+		
+	}
+	
+	.tab_wrapper ul.clearfix li.active {
+		background-color: #f5f5f5;
+		margin-top: 11px;
+		margin-bottom: -1px;
+	}
+	
+		.tab_wrapper ul.clearfix li.active a {
+			padding-top: 20px;
+		}
+
+#archive_pane li {
+	margin-bottom: 20px;
+}
+
+	#archive_pane li a {
+		font-weight: bold;
+	}
+	
+#archive_pane p {
+	margin-top: 12px;
+}
+
+p.news_item_title {
+	color: #328fc2;
+	font-weight: bold;
+}
+
 
 footer {
 	width: 100%;
+	height: 99px;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -164,9 +302,9 @@ footer nav {
 }
 
 .bodytext p {
-    font-size:0.875em;
+	font-size: 0.875em;
 }
 
 .sidenote {
-    font-size:0.75em;
+	font-size: 0.75em;
 }
