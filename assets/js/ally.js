@@ -7,5 +7,7 @@ $( document ).ready(function() {
 			$("#rates_table tbody").append(string);
 		};
 	});
-	$("footer").css("bottom", 0);
+	$(".tab_wrapper ul.clearfix li").click(function(){
+		$(".tab_wrapper ul.clearfix li").toggleClas("active")
+	});
 });
